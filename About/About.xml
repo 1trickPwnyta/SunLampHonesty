@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Sun Lamp Honesty</name>
+	<author>1trickPwnyta</author>
+	<packageId>sunlamphonesty.1trickPwnyta</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<description>
+As of RimWorld version 1.5, sun lamps light up more tiles to 100% lighting than they did before! However, the radius drawn around the sun lamp as well as the size of the growing zone it lets you auto-create were not updated.
+
+This mod draws the new and accurate light radius around the sun lamp when placing or selecting, increases the size of the auto growing zone to match, and adds a button to auto-place hydroponic blueprints around the sun lamp that maximizes the benefit of the new lit area. Note that 8 total tiles of hydroponics will remain unlit at the edges of the lit area due to the size of hydroponics basins not matching up well with the shape of the lit area. If you prefer a hydroponics setup that doesn't waste hydroponics basin tiles but instead doesn't utilize the entire lit area, you can enable classic hydroponics mode in mod settings.
+	</description>
+	<url>https://github.com/1trickPwnyta/SunLampHonesty</url>
+</ModMetaData>
