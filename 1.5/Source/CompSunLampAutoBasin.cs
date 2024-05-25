@@ -12,42 +12,6 @@ namespace SunLampHonesty
             public Rot4 rotation;
         }
 
-        private static Blueprint[] blueprints = new[] 
-        { 
-            new Blueprint() { position = IntVec3.North * 2, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.North * 2 + IntVec3.East, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.North * 2 + IntVec3.East * 2, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.North * 2 + IntVec3.East * 3, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.North * 2 + IntVec3.East * 4, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.East * 2, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.East * 2 + IntVec3.South, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.East * 2 + IntVec3.South * 2, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.East * 2 + IntVec3.South * 3, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.East * 2 + IntVec3.South * 4, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.South * 2, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.South * 2 + IntVec3.West, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.South * 2 + IntVec3.West * 2, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.South * 2 + IntVec3.West * 3, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.South * 2 + IntVec3.West * 4, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.West * 2, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.West * 2 + IntVec3.North, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.West * 2 + IntVec3.North * 2, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.West * 2 + IntVec3.North * 3, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.West * 2 + IntVec3.North * 4, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.North * 5 + IntVec3.West * 2, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.North * 5 + IntVec3.East * 2, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.North * 6, rotation = Rot4.East },
-            new Blueprint() { position = IntVec3.East * 5 + IntVec3.North * 2, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.East * 5 + IntVec3.South * 2, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.East * 6, rotation = Rot4.South },
-            new Blueprint() { position = IntVec3.South * 5 + IntVec3.East * 2, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.South * 5 + IntVec3.West * 2, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.South * 6, rotation = Rot4.West },
-            new Blueprint() { position = IntVec3.West * 5 + IntVec3.South * 2, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.West * 5 + IntVec3.North * 2, rotation = Rot4.North },
-            new Blueprint() { position = IntVec3.West * 6, rotation = Rot4.North }
-        };
-
         private static Blueprint[] blueprintsClassic = new[]
         {
             new Blueprint() { position = IntVec3.North * 2, rotation = Rot4.North },
@@ -80,7 +44,7 @@ namespace SunLampHonesty
         {
             bool blueprintPlaced = false;
             ThingDef hydroponicsDef = ThingDef.Named("HydroponicsBasin");
-            Blueprint[] blueprintsToUse = SunLampHonestySettings.ClassicHydroponicsMode ? blueprintsClassic : blueprints;
+            Blueprint[] blueprintsToUse = blueprintsClassic;
             foreach (Blueprint blueprint in blueprintsToUse)
             {
                 if (GenConstruct.CanPlaceBlueprintAt(hydroponicsDef, parent.Position + blueprint.position, blueprint.rotation, parent.Map).Accepted)
